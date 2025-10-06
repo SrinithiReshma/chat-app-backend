@@ -7,6 +7,9 @@ const messagesRouter = require('./routes/messages');
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.get('/', (req, res) => {
+  res.send('Backend is running!');
+});
 
 // routes
 app.use('/api/messages', messagesRouter);
